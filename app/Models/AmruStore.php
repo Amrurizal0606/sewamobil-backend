@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class AlpinaStore extends Model
+class AmruStore extends Model
 {
     use HasFactory, SoftDeletes;
 

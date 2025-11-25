@@ -42,8 +42,8 @@ class BookingTransaction extends Model
         return $this->belongsTo(Vehicle::class, 'vehicle_id');
     }
 
-    // public function amruStore(): BelongsTo
-    // {
-    //     return $this->belongsTo(AmruStore::class, 'amru_store_id');
-    // }
+    public function amruStore(): BelongsTo
+    {
+        return $this->belongsTo(AmruStore::class, 'amru_store_id');
+    }
 }
