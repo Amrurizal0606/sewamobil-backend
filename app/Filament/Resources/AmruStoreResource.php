@@ -24,6 +24,18 @@ class AmruStoreResource extends Resource
         return $form
             ->schema([
                 //
+
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+
+                Forms\Components\Textarea::make('address')
+                    ->required()
+                    ->maxLength(500),
+
+                Forms\Components\FileUpload::make('thumbnail')
+                    ->image()
+                    ->required(),
             ]);
     }
 
@@ -32,6 +44,10 @@ class AmruStoreResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+
+                Tables\Columns\ImageColumn::make('thumbnail'),
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),

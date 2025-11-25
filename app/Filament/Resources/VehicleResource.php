@@ -41,7 +41,7 @@ class VehicleResource extends Resource
                             ])
                             ->required(),
 
-                        Forms\Components\FileUpload::make('Thumbnail')
+                        Forms\Components\FileUpload::make('thumbnail')
                             ->image()
                             ->required(),
 
